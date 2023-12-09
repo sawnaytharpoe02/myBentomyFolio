@@ -36,7 +36,12 @@ const LeftPanel = () => {
           by an insatiable love for JavaScript. I'm always open to new
           connections and collaborations.{' '}
           <img className="inline mr-1" src="/Mail.png" width={30} />
-          <a href={`mailto:${siteConfig.mail}`} className='underline decoration-1 decoration-wavy underline-offset-1 decoration-daccent'>Feel free to reach out</a>—I'd love to connect with you! "
+          <a
+            href={`mailto:${siteConfig.mail}`}
+            className="underline decoration-1 decoration-solid underline-offset-2 decoration-accent dark:decoration-daccent hover:decoration-2">
+            Feel free to reach out
+          </a>
+          —I'd love to connect with you! "
         </p>
       </div>
       {/* Footer */}
