@@ -1,5 +1,4 @@
 export const siteConfig = {
-  name: 'Saw Nay Thar Poe',
-  position: 'Junior Web Developer',
+  author: 'Saw Nay Thar Poe',
   mail: 'sawnaytharhpoe02@gmail.com',
 };

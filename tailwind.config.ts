@@ -12,7 +12,7 @@ const config: Config = {
       colors: {
         tlight: '#080708',
         tdark: '#f8f7f8',
-        blight: '#f5f3f7',
+        blight: '#ffffff',
         bdark: '#0a080c',
         primary: '#925fb4',
         secondary: '#c097dd',
@@ -25,9 +25,17 @@ const config: Config = {
         sans: ['var(--font-googleSans)'],
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'light-grid': "url('/light-pattern.svg')",
+        'dark-grid': "url('/dark-pattern.svg')",
+      },
+      backgroundSize: {
+        auto: 'auto',
+        cover: 'cover',
+        contain: 'contain',
+        verySmall: '0.5rem',
+        3: '3rem',
+        2: '2rem',
+        1: '1rem',
       },
     },
   },

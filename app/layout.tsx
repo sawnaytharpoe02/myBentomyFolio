@@ -49,10 +49,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className='h-full' suppressHydrationWarning>
       <body className={googleSans.className}>
-        <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-          <div>{children}</div>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className='h-full'>{children}</div>
         </ThemeProvider>
       </body>
     </html>
