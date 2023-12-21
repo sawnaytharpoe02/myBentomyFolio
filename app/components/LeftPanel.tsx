@@ -38,7 +38,7 @@ const LeftPanel = () => {
               <span>junior web developer</span>
             </RoughNotation>{' '}
             with a robust love for coffee{' '}
-            <img className="inline" src="/Coffee.png" width={30} />, delving
+            <img className="inline" src="/assets/Coffee.png" width={30} />, delving
             into the{' '}
             <RoughNotation
               type="highlight"
@@ -47,7 +47,7 @@ const LeftPanel = () => {
               <span>backend's</span>
             </RoughNotation>{' '}
             enchanting realms .
-            <img className="inline mr-1" src="/Mail.png" width={25} />
+            <img className="inline mr-1" src="/assets/Mail.png" width={25} />
             Open to new connections and collaborations—
             <RoughNotation
               type="underline"

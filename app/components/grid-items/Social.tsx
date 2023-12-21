@@ -1,11 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { IGridItems } from '@/config/siteConfig';
+import Icon from '../icon';
+import Link from 'next/link';
+import Image from 'next/image';
 
-const Social = () => {
+const Social = ({ item }: { item: IGridItems }) => {
+  console.log(item);
   return (
-    <div>
-      This is social
-    </div>
-  )
-}
+    <Link
+      href={item.href ?? ''}
+      target="_blank"
+      className="w-full h-full flex flex-col items-center justify-center cursor-pointer">
+      <p className="text-lg ">{item.title}</p>
+      <p className="text-sm text-neutral-400">{item.user}</p>
+      <Icon type={item.icon ?? ''} color={item.bgColor ?? 'bg-neutral-950'} />
+    </Link>
+  );
+};
 
-export default Social
+export default Social;
