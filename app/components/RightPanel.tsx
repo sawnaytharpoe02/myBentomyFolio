@@ -4,6 +4,7 @@ import { siteConfig } from '@/config/siteConfig';
 import GridItem from './GridItem';
 import Social from './grid-items/Social';
 import Other from './grid-items/Other';
+import Study from './grid-items/Study';
 
 // const arrayItem = Array.from({ length: 10 }, (_, i) => i + 1);
 // const arrayItem = [
@@ -24,7 +25,7 @@ const RightPanel = () => {
   return (
     <div className="basis-2/3 overflow-y-auto min-h-screen px-2">
       <p className="text-3xl my-4">right side</p>
-      <div className="w-full grid grid-cols-4 auto-rows-[78px] gap-8 mb-96" id='card'>
+      <div className="w-full grid grid-cols-4 auto-rows-[78px] gap-10 mb-96" id='card'>
         {
           siteConfig.items.map((item, index) => {
             return (
@@ -32,6 +33,8 @@ const RightPanel = () => {
                 {
                   item.type === 'social' ? (
                     <Social item={item}/>
+                  ) : item.type === 'study' ? (
+                    <Study item={item}/>
                   ) : item.type === 'other' ? (
                     <Other item={item}/>
                   ) : (

@@ -15,14 +15,14 @@ const LeftPanel = () => {
     <div className="basis-1/3 py-10">
       {/* profile avatar */}
       <Image
-        src="/profile.jpg"
+        src="/assets/pf_pic.webp"
         alt="profile"
         width={120}
         height={120}
         loading="eager"
         priority
-        blurDataURL="/profile.jpg"
         placeholder="blur"
+        blurDataURL="/assets/pf_pic.webp"
         style={{ borderRadius: '50%' }}
       />
       {/* left article */}

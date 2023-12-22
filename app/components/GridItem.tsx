@@ -5,7 +5,7 @@ import { useMouse, useElementSize } from '@mantine/hooks';
 import { useState } from 'react';
 
 // common style for my lunch box
-const variants = cva('rounded-3xl shadow-border flex dark:bg-neutral-950 bg-white dark:border dark:border-[1px] dark:border-neutral-800', {
+const variants = cva('rounded-3xl shadow-border flex dark:bg-neutral-900 bg-white dark:border dark:border-[1px] dark:border-neutral-800', {
   variants: {
     size: {
       '1x2': 'col-span-1 row-span-2',
@@ -53,8 +53,8 @@ const GridItem = ({ children, size }: GridItemProps) => {
           top: position.top,
           opacity
         }}
-        className="dark:bg-neutral-100 absolute scale-[1.5] blur-3xl w-10 h-10 rounded-full transition transition-opactiy duration-300"></div>
-      <div className='w-full h-full'>{children}</div>
+        className="dark:bg-white absolute scale-[1.5] blur-2xl w-10 h-10 rounded-full transition transition-opactiy duration-300"></div>
+      <div className='w-full h-full absolute z-20'>{children}</div>
     </div>
   );
 };
