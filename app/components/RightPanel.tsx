@@ -5,6 +5,7 @@ import GridItem from './GridItem';
 import Social from './grid-items/Social';
 import Other from './grid-items/Other';
 import Study from './grid-items/Study';
+import Project from './grid-items/Project';
 
 // const arrayItem = Array.from({ length: 10 }, (_, i) => i + 1);
 // const arrayItem = [
@@ -25,26 +26,26 @@ const RightPanel = () => {
   return (
     <div className="basis-2/3 overflow-y-auto min-h-screen px-2">
       <p className="text-3xl my-4">right side</p>
-      <div className="w-full grid grid-cols-4 auto-rows-[78px] gap-10 mb-96" id='card'>
-        {
-          siteConfig.items.map((item, index) => {
-            return (
-              <GridItem key={item.title + item.type + index} size={item.layout}>
-                {
-                  item.type === 'social' ? (
-                    <Social item={item}/>
-                  ) : item.type === 'study' ? (
-                    <Study item={item}/>
-                  ) : item.type === 'other' ? (
-                    <Other item={item}/>
-                  ) : (
-                    <div>Need to create new component</div>
-                  )
-                }
-              </GridItem>
-            )
-          })
-        }
+      <div
+        className="w-full grid grid-cols-4 auto-rows-[78px] gap-10 mb-96"
+        id="card">
+        {siteConfig.items.map((item, index) => {
+          return (
+            <GridItem key={item.title + item.type + index} size={item.layout}>
+              {item.type === 'social' ? (
+                <Social item={item} />
+              ) : item.type === 'study' ? (
+                <Study item={item} />
+              ) : item.type === 'project' ? (
+                <Project item={item} />
+              ) : item.type === 'other' ? (
+                <Other item={item} />
+              ) : (
+                <div>Need to create new component</div>
+              )}
+            </GridItem>
+          );
+        })}
       </div>
     </div>
   );

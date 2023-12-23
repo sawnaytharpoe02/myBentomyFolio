@@ -19,27 +19,26 @@ const Study = ({ item }: { item: IGridItems }) => {
           )}
 
           <p
-            className={`text-sm text-tdark flex items-center px-2 py-1 rounded-lg ${
-              item.tag === 'edu'
-                ? 'bg-blue-600'
-                : 'bg-neutral-950'
+            className={`text-sm text-tlight flex items-center px-2 py-1 rounded-lg ${
+              item.cornerBtnTitle === 'My learning journey'
+                ? 'bg-blue-400'
+                : 'bg-[#DAE6FF]'
             }`}>
-            {item.tag === 'edu' ? '📌 My learning journey' : '📚 ' + item.title}
+            {item.cornerBtnTitle === 'My learning journey'
+              ? '📌 ' + item.cornerBtnTitle
+              : '📚 ' + item.cornerBtnTitle}
           </p>
         </div>
-        {item.tag === 'edu' ? (
-          <div>
-            <h3 className="text-md line-clamp-1 font-semibold">{item.title}</h3>
-            <p className="text-sm text-neutral-400 mb-1">
-              Instructor: <span className="underline">{item.user}</span>
-            </p>
-            <p className="text-sm text-neutral-400 line-clamp-2">
-              {item.description}
-            </p>
-          </div>
-        ) : (
-          <div>good</div>
-        )}
+
+        <div>
+          <h3 className="text-md line-clamp-1 font-semibold">{item.title}</h3>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-1">
+            Instructor: <span className="underline">{item.user}</span>
+          </p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-500 line-clamp-2 leading-5">
+            {item.description}
+          </p>
+        </div>
       </div>
     </Link>
   );

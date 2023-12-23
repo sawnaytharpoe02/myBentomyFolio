@@ -11,7 +11,7 @@ const Map = ({ item }: { item: IGridItems }) => {
     <Link href={item.href ?? ''} target="_blank">
       <Image
         className="cursor-pointer"
-        src={
+        src={ 
           theme === 'dark'
             ? item.settings?.src?.dark || ''
             : item.settings?.src?.light || ''

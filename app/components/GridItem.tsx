@@ -9,7 +9,7 @@ const variants = cva('rounded-3xl shadow-border flex dark:bg-neutral-900 bg-whit
   variants: {
     size: {
       '1x2': 'col-span-1 row-span-2',
-      '2x1': 'col-span-2 row-span-2',
+      '2x1': 'col-span-2 row-span-1',
       '2x2': 'col-span-2 row-span-2',
       '2x4': 'col-span-2 row-span-4',
     },  
@@ -54,7 +54,7 @@ const GridItem = ({ children, size }: GridItemProps) => {
           opacity
         }}
         className="dark:bg-white absolute scale-[1.5] blur-2xl w-10 h-10 rounded-full transition transition-opactiy duration-300"></div>
-      <div className='w-full h-full absolute z-20'>{children}</div>
+      <div className='absolute w-full h-full z-20'>{children}</div>
     </div>
   );
 };
