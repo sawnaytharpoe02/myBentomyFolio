@@ -1,17 +1,27 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import { IGridItems } from '@/config/siteConfig';
-import { CldVideoPlayer } from 'next-cloudinary';
+import { useInView } from 'react-intersection-observer';
 
 const Art = ({ item }: { item: IGridItems }) => {
+  const videoRef = useRef(null);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
   return (
-    <div className="w-full h-full">
-      <CldVideoPlayer
-        width="100%"
-        height="100%"
-        src={item.path ?? ''}
-      />
+    <div className="relative w-full h-full" ref={ref}>
+      {inView && (
+        <video
+          ref={videoRef}
+          className="absolute w-full h-full inset-0 object-cover"
+          src={require(`../../../public/${item.path}`)}
+          autoPlay
+          muted
+          loop
+          preload="auto"
+        />
+      )}
     </div>
   );
 };

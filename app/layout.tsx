@@ -3,35 +3,35 @@ import './globals.css';
 import localfont from 'next/font/local';
 import ThemeProvider from './components/ThemeProvider';
 
-const googleSans = localfont({
+const satoshi = localfont({
   src: [
     {
-      path: './fonts/ProductSans-Thin.ttf',
+      path: './fonts/Satoshi-Variable.ttf',
       weight: '100',
       style: 'normal',
     },
     {
-      path: './fonts/ProductSans-Light.ttf',
+      path: './fonts/Satoshi-Light.ttf',
       weight: '300',
       style: 'normal',
     },
     {
-      path: './fonts/ProductSans-Regular.ttf',
+      path: './fonts/Satoshi-Regular.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/ProductSans-Medium.ttf',
+      path: './fonts/Satoshi-Medium.ttf',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/ProductSans-Bold.ttf',
+      path: './fonts/Satoshi-Bold.ttf',
       weight: '600',
       style: 'normal',
     },
     {
-      path: './fonts/ProductSans-Black.ttf',
+      path: './fonts/Satoshi-Black.ttf',
       weight: '700',
       style: 'normal',
     },
@@ -50,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='h-full' suppressHydrationWarning>
-      <body className={googleSans.className}>
+      <body className={satoshi.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className='h-full'>{children}</div>
         </ThemeProvider>

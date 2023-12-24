@@ -13,7 +13,7 @@ const Project = ({ item }: { item: IGridItems }) => {
         <div className="flex items-center justify-between">
           <div className="flex gap-1 items-center">
             <Image src="/assets/Book.png" alt="book" width={40} height={30} />
-            <p className="text-md ml-2">{item.title}</p>
+            <p className="text-md ml-2 font-semibold">{item.title}</p>
           </div>
           <div className="bg-neutral-100 dark:bg-neutral-800 p-2 rounded-full">
             <ArrowDownLeft className="text-neutral-500 dark:text-neutral-300" size={22} />

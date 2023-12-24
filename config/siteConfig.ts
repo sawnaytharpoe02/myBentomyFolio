@@ -200,7 +200,43 @@ export const gridItems: IGridItems[] = [
     type: 'other',
     tag: 'art',
     layout: '2x4',
-    path: 'd5k81lz1ocfsgj9swrbj',
+    path: 'art/vd/bigSquare1.mp4',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '2x4',
+    path: 'art/vd/bigSquare2.mp4',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '2x4',
+    path: 'art/vd/bigSquare3.mp4',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '2x2',
+    path: 'art/vd/rectangle1.mp4',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '2x2',
+    path: 'art/vd/rectangle2.mp4',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '1x2',
+    path: 'art/vd/smallSquare1.mp4',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '1x2',
+    path: 'art/vd/smallSquare2.mp4',
   },
 ];
 

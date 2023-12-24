@@ -22,10 +22,11 @@ const config: Config = {
         daccent: '#6e22a5',
       },
       boxShadow: {
-        border: 'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px'
+        border:
+          'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px',
       },
       fontFamily: {
-        sans: ['var(--font-googleSans)'],
+        sans: ['var(--font-satoshi)'],
       },
       backgroundImage: {
         'light-grid': "url('/assets/light-pattern.svg')",
