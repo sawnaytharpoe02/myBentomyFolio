@@ -2,7 +2,7 @@ import React from 'react';
 import cn from '@/utils/cn';
 import { VariantProps, cva } from 'class-variance-authority';
 import { useMouse, useElementSize } from '@mantine/hooks';
-import { useState } from 'react';
+import { useState } from 'react'; 
 
 // common style for my lunch box
 const variants = cva('rounded-3xl shadow-border flex dark:bg-neutral-900 bg-white dark:border dark:border-[1px] dark:border-neutral-800', {

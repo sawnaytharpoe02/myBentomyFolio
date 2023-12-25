@@ -46,29 +46,24 @@ export interface IGridItems {
 
 export const gridItems: IGridItems[] = [
   {
-    type: 'other',
-    tag: 'game',
-    layout: '2x4',
-    title: '🔥 Mobile Legends Enthusiast',
-    description: '🚀 Let’s conquer battles together in our free time',
-    settings: {
-      backgroundImg: '/mlbb/mlbbBG.jpg',
-      gameId: '674060091',
-      favHeros: [
-        '/mlbb/heros/velatina.webp',
-        '/mlbb/heros/beatrix.webp',
-        '/mlbb/heros/irithel.webp',
-        '/mlbb/heros/lance.webp',
-        '/mlbb/heros/yuzhong.webp',
-        '/mlbb/heros/arlot.webp',
-      ],
-      mostUsedRoles: [
-        '/mlbb/roles/Assassin_Icon.webp',
-        '/mlbb/roles/Fighter_Icon.webp',
-        '/mlbb/roles/Mage_Icon.webp',
-        '/mlbb/roles/Marksman_Icon.webp',
-      ],
-    },
+    type: 'project',
+    layout: '2x1',
+    tag: 'edu',
+    icon: 'github',
+    bgColor: '#000',
+    href: 'https://github.com/sawnaytharpoe02/laravel-duraBlog',
+    title: 'Personal Blog Website',
+    description: 'Built with Laravel and TailwindCSS',
+  },
+  {
+    type: 'project',
+    layout: '2x1',
+    tag: 'edu',
+    icon: 'github',
+    bgColor: '#000',
+    href: 'https://github.com/sawnaytharpoe02/TaskMng_ReactNode',
+    title: 'Task Management System',
+    description: 'Built with NodeJS and ReactJS',
   },
   {
     type: 'other',
@@ -84,7 +79,6 @@ export const gridItems: IGridItems[] = [
       },
     },
   },
-
   {
     type: 'social',
     layout: '1x2',
@@ -152,27 +146,34 @@ export const gridItems: IGridItems[] = [
     layout: '2x1',
     tag: 'progressTitle',
     title: 'Whispers from the Shelves',
+    description: 'shelves',
   },
   {
-    type: 'project',
-    layout: '2x1',
-    tag: 'edu',
-    icon: 'github',
-    bgColor: '#000',
-    href: 'https://github.com/sawnaytharpoe02/laravel-duraBlog',
-    title: 'Personal Blog Website',
-    description: 'Built with Laravel and TailwindCSS',
+    type: 'other',
+    tag: 'game',
+    layout: '2x4',
+    title: '🔥 Mobile Legends Enthusiast',
+    description: '🚀 Let’s conquer battles in our free time',
+    settings: {
+      backgroundImg: '/mlbb/mlbbBG.jpg',
+      gameId: '674060091',
+      favHeros: [
+        '/mlbb/heros/velatina.webp',
+        '/mlbb/heros/beatrix.webp',
+        '/mlbb/heros/irithel.webp',
+        '/mlbb/heros/lance.webp',
+        '/mlbb/heros/yuzhong.webp',
+        '/mlbb/heros/arlot.webp',
+      ],
+      mostUsedRoles: [
+        '/mlbb/roles/Assassin_Icon.webp',
+        '/mlbb/roles/Fighter_Icon.webp',
+        '/mlbb/roles/Mage_Icon.webp',
+        '/mlbb/roles/Marksman_Icon.webp',
+      ],
+    },
   },
-  {
-    type: 'project',
-    layout: '2x1',
-    tag: 'edu',
-    icon: 'github',
-    bgColor: '#000',
-    href: 'https://github.com/sawnaytharpoe02/TaskMng_ReactNode',
-    title: 'Task Management System',
-    description: 'Built with NodeJS and ReactJS',
-  },
+
   {
     type: 'other',
     layout: '2x4',
@@ -197,6 +198,13 @@ export const gridItems: IGridItems[] = [
     ],
   },
   {
+    type: 'project',
+    layout: '2x1',
+    tag: 'progressTitle',
+    title: `Got mad love for these arts`,
+    description: 'blob',
+  },
+  {
     type: 'other',
     tag: 'art',
     layout: '2x4',
@@ -205,14 +213,32 @@ export const gridItems: IGridItems[] = [
   {
     type: 'other',
     tag: 'art',
-    layout: '2x4',
-    path: 'art/vd/bigSquare2.mp4',
+    layout: '1x2',
+    path: '/art/img/1.jpg',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '1x2',
+    path: '/art/img/2.jpg',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '1x2',
+    path: '/art/img/3.jpg',
+  },
+  {
+    type: 'other',
+    tag: 'art',
+    layout: '1x2',
+    path: '/art/img/4.jpg',
   },
   {
     type: 'other',
     tag: 'art',
     layout: '2x4',
-    path: 'art/vd/bigSquare3.mp4',
+    path: 'art/vd/bigSquare2.mp4',
   },
   {
     type: 'other',
@@ -229,14 +255,8 @@ export const gridItems: IGridItems[] = [
   {
     type: 'other',
     tag: 'art',
-    layout: '1x2',
-    path: 'art/vd/smallSquare1.mp4',
-  },
-  {
-    type: 'other',
-    tag: 'art',
-    layout: '1x2',
-    path: 'art/vd/smallSquare2.mp4',
+    layout: '2x4',
+    path: 'art/vd/bigSquare3.mp4',
   },
 ];
 

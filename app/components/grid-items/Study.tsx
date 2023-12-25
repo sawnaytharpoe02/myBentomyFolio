@@ -7,16 +7,12 @@ import Image from 'next/image';
 const Study = ({ item }: { item: IGridItems }) => {
   return (
     <Link href={item.href ?? ''} target="_blank">
-      <div className="p-7 space-y-3">
+      <div className="p-7">
         <div className="flex space-x-2 items-center justify-between">
-          {item.tag === 'edu' ? (
-            <Icon
-              type={item.icon ?? ''}
-              color={item.bgColor ?? 'bg-neutral-950'}
-            />
-          ) : (
-            <Image src="/assets/Book.png" alt="book" width={40} height={40} />
-          )}
+          <Icon
+            type={item.icon ?? ''}
+            color={item.bgColor ?? 'bg-neutral-950'}
+          />
 
           <p
             className={`text-sm text-tlight flex items-center px-2 py-1 rounded-lg ${
@@ -30,12 +26,12 @@ const Study = ({ item }: { item: IGridItems }) => {
           </p>
         </div>
 
-        <div>
+        <div className="space-y-1 mt-2">
           <h3 className="text-md line-clamp-1 font-semibold">{item.title}</h3>
-          <p className="text-sm text-neutral-500 dark:text-neutral-400 mb-1">
+          <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-1 font-medium">
             Instructor: <span className="underline">{item.user}</span>
           </p>
-          <p className="text-sm text-neutral-500 dark:text-neutral-500 line-clamp-2 leading-5">
+          <p className="text-sm font-medium text-black/80 dark:text-neutral-500 line-clamp-2 leading-5">
             {item.description}
           </p>
         </div>

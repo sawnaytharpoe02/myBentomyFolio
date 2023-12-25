@@ -10,8 +10,8 @@ const Book = ({ item }: { item: IGridItems }) => {
       <div className="grid grid-cols-2 gap-10">
         {item.bookstore?.map((book, index) => (
           <div
-            className="relative overflow-hidden rounded-xl
-            key={index}-xl">
+            key={index}
+            className="relative overflow-hidden rounded-xl">
             <Image
               src={book.cover}
               alt="book"

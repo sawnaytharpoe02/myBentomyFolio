@@ -21,7 +21,7 @@ const Game = ({ item }: { item: IGridItems }) => {
         />
       </div>
       {/* inner content */}
-      <div className="w-full h-full z-20 flex items-end p-7">
+      <div className="w-full h-full z-20 flex items-end p-7 font-medium">
         <div className="flex gap-4 flex-wrap">
           <h3 className="text-sm bg-neutral-50 dark:bg-neutral-900 w-fit px-2 py-1 rounded-lg">
             {item.title}
@@ -42,6 +42,8 @@ const Game = ({ item }: { item: IGridItems }) => {
                   height={20}
                   priority
                   loading="eager"
+                  placeholder='blur'
+                  blurDataURL={role}
                 />
               </div>
             ))}
@@ -60,6 +62,8 @@ const Game = ({ item }: { item: IGridItems }) => {
                   height={20}
                   priority
                   loading="eager"
+                  placeholder='blur'
+                  blurDataURL={hero}
                 />
               </div>
             ))}

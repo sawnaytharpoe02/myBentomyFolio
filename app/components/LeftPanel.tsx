@@ -10,7 +10,6 @@ import { useTheme } from 'next-themes';
 const LeftPanel = () => {
   const { theme } = useTheme();
 
-  console.log(theme);
   return (
     <div className="basis-1/3 py-10">
       {/* profile avatar */}
@@ -61,7 +60,7 @@ const LeftPanel = () => {
 
       {/* Footer */}
       <div className="flex justify-between items-center border-t border-neutral-200 dark:border-neutral-900 mt-6 pt-4">
-        <p className="text-neutral-800 tracking-wider dark:text-neutral-400">
+        <p className="text-neutral-800 text-sm tracking-wider dark:text-neutral-400">
           Designed and coded with love's fiery touch. ❤️‍🔥
         </p>
         <ThemeSwitcher />
