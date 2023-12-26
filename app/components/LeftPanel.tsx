@@ -11,7 +11,7 @@ const LeftPanel = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="basis-1/3 py-10">
+    <div className="basis-[30%] py-16">
       {/* profile avatar */}
       <Image
         src="/assets/pf_pic.webp"
@@ -26,7 +26,7 @@ const LeftPanel = () => {
       />
       {/* left article */}
       <div className="mt-6 space-y-2">
-        <p className="text-4xl font-bold">{siteConfig.author}</p>
+        <p className="text-4xl font-bold mb-4">{siteConfig.author}</p>
         <RoughNotationGroup show={true}>
           <p className="text-[1.05rem] leading-relaxed tracking-wider text-neutral-800 dark:text-neutral-300">
             A meticulous{' '}
@@ -47,12 +47,12 @@ const LeftPanel = () => {
             </RoughNotation>{' '}
             enchanting realms .
             <img className="inline mr-1" src="/assets/Mail.png" width={25} />
-            Open to new connections and collaborations—
+            Open for new collaborations—
             <RoughNotation
               type="underline"
               color={theme === 'dark' ? '#E8E9F3' : '#1C1C27'}
               strokeWidth={1}>
-              <a href={`mailto:${siteConfig.mail}`}>let's connect !!</a>
+              <a href={`mailto:${siteConfig.mail}`}> let's connect !!</a>
             </RoughNotation>
           </p>
         </RoughNotationGroup>

@@ -6,21 +6,20 @@ import { ArrowUpRight } from 'lucide-react';
 
 const Book = ({ item }: { item: IGridItems }) => {
   return (
-    <div className="p-10">
-      <div className="grid grid-cols-2 gap-10">
+    <div className="w-full h-full p-10">
+      <div className="grid grid-cols-2 auto-rows-[45%] gap-8 h-full">
         {item.bookstore?.map((book, index) => (
           <div
             key={index}
-            className="relative overflow-hidden rounded-xl">
+            className="col-span-1 row-span-1 w-full h-full relative rounded-xl overflow-hidden shadow-lg">
             <Image
               src={book.cover}
               alt="book"
-              width={200}
-              height={80}
               objectFit="cover"
+              layout="fill"
               priority
-              loading='eager'
-              placeholder='blur'
+              loading="eager"
+              placeholder="blur"
               blurDataURL={book.cover}
             />
             <Link

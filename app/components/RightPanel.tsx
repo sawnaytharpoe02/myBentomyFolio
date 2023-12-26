@@ -24,8 +24,10 @@ import Project from './grid-items/Project';
 
 const RightPanel = () => {
   return (
-    <div className="basis-2/3 overflow-y-auto min-h-screen px-2">
-      <p className="text-3xl my-4">right side</p>
+    <div className="basis-[70%] overflow-y-auto min-h-screen px-2 py-12">
+      <p className="text-2xl mb-10">
+        Snapshot of my current obsessions, not a career retrospective ... 🤯✨
+      </p>
       <div
         className="w-full grid grid-cols-4 auto-rows-[78px] gap-10 mb-96"
         id="card">
