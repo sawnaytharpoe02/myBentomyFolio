@@ -45,8 +45,8 @@ const Project = ({ item }: { item: IGridItems }) => {
           <div className="flex items-center gap-3 md:gap-4">
             <Icon type={item.icon ?? ''} color={item.bgColor} />
             <div className="flex flex-col gap-0.5 justify-start">
-              <p className="text-base @md:text-md font-semibold line-clamp-1">{item.title}</p>
-              <p className="text-base @md:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-1">
+              <p className="text-base md:text-md font-semibold line-clamp-1">{item.title}</p>
+              <p className="text-base md:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-1">
                 {item.description}
               </p>
             </div>

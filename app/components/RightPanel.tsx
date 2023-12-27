@@ -11,7 +11,7 @@ import { useAnimate, stagger } from 'framer-motion';
 
 // const arrayItem = Array.from({ length: 10 }, (_, i) => i + 1)
 
-const staggerDelay = stagger(0.06);
+const staggerDelay = stagger(0.04);
 
 const RightPanel = () => {
   const [scope, animate] = useAnimate();
