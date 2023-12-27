@@ -39,7 +39,7 @@ const satoshi = localfont({
 });
 
 export const metadata: Metadata = {
-  title: 'sntp dev',
+  title: 'sntpdev',
   description:
     'Staying up-to-date on the latest web development trends and technologies',
 };
