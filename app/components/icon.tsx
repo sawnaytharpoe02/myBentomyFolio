@@ -1,3 +1,5 @@
+"use client";
+
 const Icons: { [key: string]: JSX.Element } = {
   github: (
     <svg
