@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import React, { useEffect } from 'react';
-import { siteConfig } from '@/config/siteConfig';
-import GridItem from './GridItem';
-import Social from './grid-items/Social';
-import Other from './grid-items/Other';
-import Study from './grid-items/Study';
-import Project from './grid-items/Project';
-import { useAnimate, stagger } from 'framer-motion';
+import React, { useEffect } from "react";
+import { siteConfig } from "@/config/siteConfig";
+import GridItem from "./GridItem";
+import Social from "./grid-items/Social";
+import Other from "./grid-items/Other";
+import Study from "./grid-items/Study";
+import Project from "./grid-items/Project";
+import { useAnimate, stagger } from "framer-motion";
 
 // const arrayItem = Array.from({ length: 10 }, (_, i) => i + 1)
 
@@ -19,14 +19,14 @@ const RightPanel = () => {
   useEffect(() => {
     if (scope.current) {
       animate(
-        'div',
+        "div",
         {
           opacity: 1,
           y: 0,
           scale: 1,
         },
         {
-          type: 'spring',
+          type: "spring",
           stiffness: 340,
           damping: 35,
           delay: staggerDelay,
@@ -46,13 +46,13 @@ const RightPanel = () => {
         {siteConfig.items.map((item, index) => {
           return (
             <GridItem key={item.title + item.type + index} size={item.layout}>
-              {item.type === 'social' ? (
+              {item.type === "social" ? (
                 <Social item={item} />
-              ) : item.type === 'study' ? (
+              ) : item.type === "study" ? (
                 <Study item={item} />
-              ) : item.type === 'project' ? (
+              ) : item.type === "project" ? (
                 <Project item={item} />
-              ) : item.type === 'other' ? (
+              ) : item.type === "other" ? (
                 <Other item={item} />
               ) : (
                 <div>Need to create new component</div>

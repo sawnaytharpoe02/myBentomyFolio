@@ -1,5 +1,5 @@
-import React from 'react';
-import ThemeSwitcher from './ThemeSwitcher';
+import React from "react";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Footer = () => {
   return (

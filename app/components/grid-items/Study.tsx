@@ -1,27 +1,27 @@
-import React from 'react';
-import { IGridItems } from '@/config/siteConfig';
-import Icon from '../icon';
-import Link from 'next/link';
+import React from "react";
+import { IGridItems } from "@/config/siteConfig";
+import Icon from "../icon";
+import Link from "next/link";
 
 const Study = ({ item }: { item: IGridItems }) => {
   return (
-    <Link href={item.href ?? ''} target="_blank">
+    <Link href={item.href ?? ""} target="_blank">
       <div className="p-7">
         <div className="flex space-x-2 items-center justify-between">
           <Icon
-            type={item.icon ?? ''}
-            color={item.bgColor ?? 'bg-neutral-950'}
+            type={item.icon ?? ""}
+            color={item.bgColor ?? "bg-neutral-950"}
           />
 
           <p
             className={`text-sm text-tlight flex items-center px-2 py-1 rounded-lg ${
-              item.cornerBtnTitle === 'My learning journey'
-                ? 'bg-blue-400'
-                : 'bg-[#DAE6FF]'
+              item.cornerBtnTitle === "My learning journey"
+                ? "bg-blue-400"
+                : "bg-[#DAE6FF]"
             }`}>
-            {item.cornerBtnTitle === 'My learning journey'
-              ? '📌 ' + item.cornerBtnTitle
-              : '📚 ' + item.cornerBtnTitle}
+            {item.cornerBtnTitle === "My learning journey"
+              ? "📌 " + item.cornerBtnTitle
+              : "📚 " + item.cornerBtnTitle}
           </p>
         </div>
 

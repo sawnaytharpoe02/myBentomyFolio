@@ -1,8 +1,8 @@
-import React from 'react';
-import { IGridItems } from '@/config/siteConfig';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
+import React from "react";
+import { IGridItems } from "@/config/siteConfig";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 const Book = ({ item }: { item: IGridItems }) => {
   return (

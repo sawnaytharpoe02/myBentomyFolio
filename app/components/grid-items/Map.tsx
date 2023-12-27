@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import React, { useEffect, useState } from 'react';
-import { IGridItems } from '@/config/siteConfig';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useTheme } from 'next-themes';
+import React, { useEffect, useState } from "react";
+import { IGridItems } from "@/config/siteConfig";
+import Image from "next/image";
+import Link from "next/link";
+import { useTheme } from "next-themes";
 
 const Map = ({ item }: { item: IGridItems }) => {
-  const address = item.description?.split(',');
+  const address = item.description?.split(",");
   const { theme } = useTheme();
   const [clientLoaded, setClientLoaded] = useState(false);
 
@@ -20,14 +20,14 @@ const Map = ({ item }: { item: IGridItems }) => {
   }
 
   return (
-    <Link href={item.href ?? ''} target="_blank">
+    <Link href={item.href ?? ""} target="_blank">
       <div className="absolute w-full h-full">
         <Image
           className="cursor-pointer"
           src={
-            theme === 'dark'
-              ? item.settings?.src?.dark || ''
-              : item.settings?.src?.light || ''
+            theme === "dark"
+              ? item.settings?.src?.dark || ""
+              : item.settings?.src?.light || ""
           }
           layout="fill"
           objectFit="cover"
@@ -36,9 +36,9 @@ const Map = ({ item }: { item: IGridItems }) => {
           loading="eager"
           placeholder="blur"
           blurDataURL={
-            theme === 'dark'
-              ? item.settings?.src?.dark || ''
-              : item.settings?.src?.light || ''
+            theme === "dark"
+              ? item.settings?.src?.dark || ""
+              : item.settings?.src?.light || ""
           }
         />
       </div>

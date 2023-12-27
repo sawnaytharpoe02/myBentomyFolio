@@ -1,6 +1,6 @@
-import React from 'react';
-import { IGridItems } from '@/config/siteConfig';
-import Image from 'next/image';
+import React from "react";
+import { IGridItems } from "@/config/siteConfig";
+import Image from "next/image";
 
 const Game = ({ item }: { item: IGridItems }) => {
   return (
@@ -10,14 +10,14 @@ const Game = ({ item }: { item: IGridItems }) => {
       {/* bg img */}
       <div className="absolute w-full h-full">
         <Image
-          src={item?.settings?.backgroundImg ?? ''}
+          src={item?.settings?.backgroundImg ?? ""}
           alt="heroImg"
           layout="fill"
           objectFit="cover"
           priority
           loading="eager"
           placeholder="blur"
-          blurDataURL={item?.settings?.backgroundImg ?? ''}
+          blurDataURL={item?.settings?.backgroundImg ?? ""}
         />
       </div>
       {/* inner content */}
@@ -42,7 +42,7 @@ const Game = ({ item }: { item: IGridItems }) => {
                   height={20}
                   priority
                   loading="eager"
-                  placeholder='blur'
+                  placeholder="blur"
                   blurDataURL={role}
                 />
               </div>
@@ -62,7 +62,7 @@ const Game = ({ item }: { item: IGridItems }) => {
                   height={20}
                   priority
                   loading="eager"
-                  placeholder='blur'
+                  placeholder="blur"
                   blurDataURL={hero}
                 />
               </div>

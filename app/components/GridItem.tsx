@@ -1,24 +1,27 @@
-import React from 'react';
-import cn from '@/utils/cn';
-import { VariantProps, cva } from 'class-variance-authority';
-import { useMouse, useElementSize } from '@mantine/hooks';
-import { useState } from 'react'; 
-import { motion } from 'framer-motion';
+import React from "react";
+import cn from "@/utils/cn";
+import { VariantProps, cva } from "class-variance-authority";
+import { useMouse, useElementSize } from "@mantine/hooks";
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 // common style for my lunch box
-const variants = cva('rounded-3xl shadow-border flex dark:bg-neutral-900 bg-white dark:border dark:border-[1px] dark:border-neutral-800 @container', {
-  variants: {
-    size: {
-      '1x2': 'col-span-2 md:col-span-1 row-span-2',
-      '2x1': 'col-span-full md:col-span-2 row-span-1',
-      '2x2': 'col-span-full md:col-span-2 row-span-2',
-      '2x4': 'col-span-full md:col-span-2 row-span-4',
-    },  
-  },
-  defaultVariants: {
-    size: '1x2',
-  },
-});
+const variants = cva(
+  "rounded-3xl shadow-border flex dark:bg-neutral-900 bg-white dark:border dark:border-[1px] dark:border-neutral-800 @container",
+  {
+    variants: {
+      size: {
+        "1x2": "col-span-2 md:col-span-1 row-span-2",
+        "2x1": "col-span-full md:col-span-2 row-span-1",
+        "2x2": "col-span-full md:col-span-2 row-span-2",
+        "2x4": "col-span-full md:col-span-2 row-span-4",
+      },
+    },
+    defaultVariants: {
+      size: "1x2",
+    },
+  }
+);
 
 type GridItemProps = { children: React.ReactNode } & VariantProps<
   typeof variants
@@ -43,20 +46,20 @@ const GridItem = ({ children, size }: GridItemProps) => {
   };
   return (
     <motion.div
-    initial={{ opacity: 0, scale: 0.4, y: 70 }}
+      initial={{ opacity: 0, scale: 0.4, y: 70 }}
       ref={cardEl}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={cn(variants({ size, className: 'relative overflow-hidden' }))}>
+      className={cn(variants({ size, className: "relative overflow-hidden" }))}>
       <div
         ref={circleEl}
         style={{
           left: position.left,
           top: position.top,
-          opacity
+          opacity,
         }}
         className="dark:bg-white absolute scale-[1.5] blur-2xl w-10 h-10 rounded-full transition transition-opactiy duration-300"></div>
-      <div className='absolute w-full h-full z-20'>{children}</div>
+      <div className="absolute w-full h-full z-20">{children}</div>
     </motion.div>
   );
 };

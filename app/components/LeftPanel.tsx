@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { siteConfig } from '@/config/siteConfig';
-import { RoughNotationGroup, RoughNotation } from 'react-rough-notation';
-import { useTheme } from 'next-themes';
-import Footer from './Footer';
+import React from "react";
+import Image from "next/image";
+import { siteConfig } from "@/config/siteConfig";
+import { RoughNotationGroup, RoughNotation } from "react-rough-notation";
+import { useTheme } from "next-themes";
+import Footer from "./Footer";
 
 const LeftPanel = () => {
   const { theme } = useTheme();
@@ -22,29 +22,29 @@ const LeftPanel = () => {
         priority
         placeholder="blur"
         blurDataURL="/assets/pf_pic.webp"
-        style={{ borderRadius: '50%' }}
+        style={{ borderRadius: "50%" }}
       />
       {/* left article */}
       <div className="mt-6 space-y-2">
         <p className="text-4xl font-bold mb-4">{siteConfig.author}</p>
         <RoughNotationGroup show={true}>
           <p className="text-[1.05rem] leading-relaxed tracking-wider text-neutral-800 dark:text-neutral-300">
-            A meticulous{' '}
+            A meticulous{" "}
             <RoughNotation
               type="highlight"
-              color={theme === 'dark' ? '#6e22a5' : '#c097dd'}
+              color={theme === "dark" ? "#6e22a5" : "#c097dd"}
               strokeWidth={1}>
               <span>junior web developer</span>
-            </RoughNotation>{' '}
-            with a robust love for coffee{' '}
+            </RoughNotation>{" "}
+            with a robust love for coffee{" "}
             <img className="inline" src="/assets/Coffee.png" width={30} />,
-            delving into the{' '}
+            delving into the{" "}
             <RoughNotation
               type="highlight"
-              color={theme === 'dark' ? '#069082' : '#6edacf'}
+              color={theme === "dark" ? "#069082" : "#6edacf"}
               strokeWidth={1}>
               <span>backend's</span>
-            </RoughNotation>{' '}
+            </RoughNotation>{" "}
             enchanting realms .
             <img className="inline mr-1" src="/assets/Mail.png" width={25} />
             Open for new collaborations—
