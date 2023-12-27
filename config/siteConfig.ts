@@ -83,7 +83,7 @@ export const gridItems: IGridItems[] = [
     type: 'social',
     layout: '1x2',
     title: 'Github',
-    user: '@sawnaytharhpoe02',
+    user: '@sawnaytharpoe02',
     href: 'https://github.com/sawnaytharpoe02/',
     icon: 'github',
     bgColor: '#000',
@@ -150,6 +150,29 @@ export const gridItems: IGridItems[] = [
   },
   {
     type: 'other',
+    layout: '2x4',
+    tag: 'book',
+    bookstore: [
+      {
+        cover: '/bookstore/1.png',
+        url: 'https://www.amazon.com/Node-js-Design-Patterns-production-grade-applications/dp/1839214112/ref=sr_1_1?crid=3TQAEFDWPFY6K&keywords=nodejs+design+patterns&qid=1703339496&sprefix=dis%2Caps%2C2649&sr=8-1',
+      },
+      {
+        cover: '/bookstore/2.png',
+        url: 'https://www.amazon.com/Pro-MERN-Stack-Development-Express/dp/1484243900/ref=sr_1_1?crid=2YCNUKKONDZNP&keywords=pro+mern+stack&qid=1703339527&sprefix=pro+mern+st%2Caps%2C617&sr=8-1',
+      },
+      {
+        cover: '/bookstore/3.png',
+        url: 'https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?crid=2VS5WYYU8BC08&keywords=clean+code+robert+c+martin&qid=1703339569&sprefix=clean+code+robert+%2Caps%2C548&sr=8-1',
+      },
+      {
+        cover: '/bookstore/4.png',
+        url: 'https://www.amazon.com/Distributed-Systems-Node-js-Building-Enterprise-Ready/dp/1492077291/ref=sr_1_1?crid=1XOOH21Z6YHE&keywords=Distributed+Systems+with+Node.js%3A+Building+Enterprise-Ready+Backend+Services&qid=1703339149&sprefix=distributed+systems+with+node.js+building+enterprise-ready+backend+services%2Caps%2C662&sr=8-1',
+      },
+    ],
+  },
+  {
+    type: 'other',
     tag: 'game',
     layout: '2x4',
     title: '🔥 Mobile Legends Enthusiast',
@@ -172,30 +195,6 @@ export const gridItems: IGridItems[] = [
         '/mlbb/roles/Marksman_Icon.webp',
       ],
     },
-  },
-
-  {
-    type: 'other',
-    layout: '2x4',
-    tag: 'book',
-    bookstore: [
-      {
-        cover: '/bookstore/1.png',
-        url: 'https://www.amazon.com/Node-js-Design-Patterns-production-grade-applications/dp/1839214112/ref=sr_1_1?crid=3TQAEFDWPFY6K&keywords=nodejs+design+patterns&qid=1703339496&sprefix=dis%2Caps%2C2649&sr=8-1',
-      },
-      {
-        cover: '/bookstore/2.png',
-        url: 'https://www.amazon.com/Pro-MERN-Stack-Development-Express/dp/1484243900/ref=sr_1_1?crid=2YCNUKKONDZNP&keywords=pro+mern+stack&qid=1703339527&sprefix=pro+mern+st%2Caps%2C617&sr=8-1',
-      },
-      {
-        cover: '/bookstore/3.png',
-        url: 'https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?crid=2VS5WYYU8BC08&keywords=clean+code+robert+c+martin&qid=1703339569&sprefix=clean+code+robert+%2Caps%2C548&sr=8-1',
-      },
-      {
-        cover: '/bookstore/4.png',
-        url: 'https://www.amazon.com/Distributed-Systems-Node-js-Building-Enterprise-Ready/dp/1492077291/ref=sr_1_1?crid=1XOOH21Z6YHE&keywords=Distributed+Systems+with+Node.js%3A+Building+Enterprise-Ready+Backend+Services&qid=1703339149&sprefix=distributed+systems+with+node.js+building+enterprise-ready+backend+services%2Caps%2C662&sr=8-1',
-      },
-    ],
   },
   {
     type: 'project',

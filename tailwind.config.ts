@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: ['class'],
   theme: {
     extend: {
+      gridRow: {
+        78: '78px',
+      },
       colors: {
         tlight: '#080708',
         tdark: '#f8f7f8',
@@ -22,7 +25,8 @@ const config: Config = {
         daccent: '#6e22a5',
       },
       boxShadow: {
-        border:'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px',
+        border:
+          'rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px',
       },
       fontFamily: {
         sans: ['var(--font-satoshi)'],
@@ -42,6 +46,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/container-queries')],
 };
 export default config;

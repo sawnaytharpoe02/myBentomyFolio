@@ -6,12 +6,13 @@ import Image from 'next/image';
 import { siteConfig } from '@/config/siteConfig';
 import { RoughNotationGroup, RoughNotation } from 'react-rough-notation';
 import { useTheme } from 'next-themes';
+import Footer from './Footer';
 
 const LeftPanel = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="basis-[30%] py-16">
+    <div className="basis-[30%] py-10 lg:py-16">
       {/* profile avatar */}
       <Image
         src="/assets/pf_pic.webp"
@@ -37,8 +38,8 @@ const LeftPanel = () => {
               <span>junior web developer</span>
             </RoughNotation>{' '}
             with a robust love for coffee{' '}
-            <img className="inline" src="/assets/Coffee.png" width={30} />, delving
-            into the{' '}
+            <img className="inline" src="/assets/Coffee.png" width={30} />,
+            delving into the{' '}
             <RoughNotation
               type="highlight"
               color={theme === 'dark' ? '#069082' : '#6edacf'}
@@ -48,22 +49,16 @@ const LeftPanel = () => {
             enchanting realms .
             <img className="inline mr-1" src="/assets/Mail.png" width={25} />
             Open for new collaborations—
-            <RoughNotation
-              type="underline"
-              color={theme === 'dark' ? '#E8E9F3' : '#1C1C27'}
-              strokeWidth={1}>
-              <a href={`mailto:${siteConfig.mail}`}> let's connect !!</a>
-            </RoughNotation>
+            <a className="inline" href={`mailto:${siteConfig.mail}`}>
+              let's connect !!
+            </a>
           </p>
         </RoughNotationGroup>
       </div>
 
       {/* Footer */}
-      <div className="flex justify-between items-center border-t border-neutral-200 dark:border-neutral-900 mt-6 pt-4">
-        <p className="text-neutral-800 text-sm tracking-wider dark:text-neutral-400">
-          Designed and coded with love's fiery touch. ❤️‍🔥
-        </p>
-        <ThemeSwitcher />
+      <div className="hidden xl:flex">
+        <Footer />
       </div>
     </div>
   );

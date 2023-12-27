@@ -13,6 +13,7 @@
 
 ## responsive layout and typography
 - @tailwindcss/container-queries
+- react-responsive
 
 ## animation
 - framer-motion

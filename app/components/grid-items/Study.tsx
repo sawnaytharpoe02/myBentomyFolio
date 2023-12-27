@@ -2,7 +2,6 @@ import React from 'react';
 import { IGridItems } from '@/config/siteConfig';
 import Icon from '../icon';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Study = ({ item }: { item: IGridItems }) => {
   return (
@@ -31,7 +30,7 @@ const Study = ({ item }: { item: IGridItems }) => {
           <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-1 font-medium">
             Instructor: <span className="underline">{item.user}</span>
           </p>
-          <p className="text-sm font-medium text-black/80 dark:text-neutral-500 line-clamp-2 leading-5">
+          <p className="text-sm font-medium text-black/80 dark:text-neutral-500 line-clamp-1 lg:line-clamp-2 leading-5">
             {item.description}
           </p>
         </div>

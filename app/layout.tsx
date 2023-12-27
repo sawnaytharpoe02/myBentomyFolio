@@ -51,7 +51,7 @@ export default function RootLayout({
   return (
     <html lang="en" className='h-full' suppressHydrationWarning>
       <body className={satoshi.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme='system' enableSystem>
           <div className='h-full'>{children}</div>
         </ThemeProvider>
       </body>

@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useState } from 'react';
 import { IGridItems } from '@/config/siteConfig';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,9 +9,19 @@ import { useTheme } from 'next-themes';
 const Map = ({ item }: { item: IGridItems }) => {
   const address = item.description?.split(',');
   const { theme } = useTheme();
+  const [clientLoaded, setClientLoaded] = useState(false);
+
+  useEffect(() => {
+    setClientLoaded(true);
+  }, []);
+
+  if (!clientLoaded) {
+    return <div className="w-full h-full bg-neutral-400/20 blur-3xl"></div>;
+  }
+
   return (
     <Link href={item.href ?? ''} target="_blank">
-      <div className='absolute w-full h-full'>
+      <div className="absolute w-full h-full">
         <Image
           className="cursor-pointer"
           src={
@@ -19,7 +31,6 @@ const Map = ({ item }: { item: IGridItems }) => {
           }
           layout="fill"
           objectFit="cover"
-          sizes='(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw'
           alt="where_I_am_from"
           priority
           loading="eager"
@@ -36,7 +47,7 @@ const Map = ({ item }: { item: IGridItems }) => {
         <h3 className="absolute text-sm right-5 top-5 bg-neutral-50 dark:bg-neutral-900 w-fit px-2 py-1 rounded-lg">
           {item.title}
         </h3>
-        <div className="absolute flex flex-col gap-2 top-72 left-14">
+        <div className="absolute flex flex-col gap-2 top-64 lg:top-72 left-14">
           {address?.map((row, index) => (
             <p
               key={index}

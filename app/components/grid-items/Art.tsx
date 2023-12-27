@@ -28,7 +28,6 @@ const Art = ({ item }: { item: IGridItems }) => {
       alt="art_gallery"
       layout="fill"
       objectFit="cover"
-      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
       priority
       loading="eager"
       placeholder="blur"

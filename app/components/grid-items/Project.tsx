@@ -1,7 +1,7 @@
 import React from 'react';
 import { IGridItems } from '@/config/siteConfig';
 import Image from 'next/image';
-import { ArrowDownLeft, ArrowUp } from 'lucide-react';
+import { ArrowDownRight } from 'lucide-react';
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import Icon from '../icon';
@@ -31,10 +31,10 @@ const Project = ({ item }: { item: IGridItems }) => {
                   : '/assets/Book.png'
               }
             />
-            <p className="text-md ml-2 font-semibold">{item.title}</p>
+            <p className="text-base @md:text-md ml-2 font-semibold">{item.title}</p>
           </div>
-          <div className="bg-neutral-100 dark:bg-neutral-800 p-2 rounded-full">
-            <ArrowDownLeft
+          <div className="bg-neutral-100 dark:bg-neutral-800 p-2 rounded-full ml-2">
+            <ArrowDownRight
               className="text-neutral-500 dark:text-neutral-300"
               size={22}
             />
@@ -42,11 +42,11 @@ const Project = ({ item }: { item: IGridItems }) => {
         </div>
       ) : item.tag === 'edu' ? (
         <div className="flex items-center justify-between">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 md:gap-4">
             <Icon type={item.icon ?? ''} color={item.bgColor} />
             <div className="flex flex-col gap-0.5 justify-start">
-              <p className="text-md font-semibold">{item.title}</p>
-              <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              <p className="text-base @md:text-md font-semibold line-clamp-1">{item.title}</p>
+              <p className="text-base @md:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-1">
                 {item.description}
               </p>
             </div>
@@ -54,7 +54,7 @@ const Project = ({ item }: { item: IGridItems }) => {
           <Link
             href={item.href ?? ''}
             target="_blank"
-            className="bg-neutral-100 dark:bg-neutral-800 p-2 rounded-full text-neutral-500 dark:text-neutral-300 hover:bg-neutral-300 dark:hover:bg-neutral-900 cursor-pointer">
+            className="bg-neutral-100 dark:bg-neutral-800 p-2 ml-2x rounded-full text-neutral-500 dark:text-neutral-300 hover:bg-neutral-300 dark:hover:bg-neutral-900 cursor-pointer">
             <ArrowUpRight size={18} />
           </Link>
         </div>
