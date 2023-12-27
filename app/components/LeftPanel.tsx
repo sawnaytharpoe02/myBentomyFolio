@@ -49,7 +49,7 @@ const LeftPanel = () => {
             <img className="inline mr-1" src="/assets/Mail.png" width={25} />
             Open for new collaborations—
             <a className="inline" href={`mailto:${siteConfig.mail}`}>
-              let's connect !!
+              lets connect !!
             </a>
           </p>
         </RoughNotationGroup>
