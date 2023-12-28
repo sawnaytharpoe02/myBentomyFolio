@@ -14,7 +14,7 @@ const Art = ({ item }: { item: IGridItems }) => {
         <video
           ref={videoRef}
           className="absolute w-full h-full inset-0 object-cover"
-          src={require(`../../../public/${item.path}`)}
+          src={require(`../../public/${item.path}`)}
           autoPlay
           muted
           loop
