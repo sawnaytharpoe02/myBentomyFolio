@@ -22,6 +22,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-intersection-observer": "^9.5.3",
+    "react-loader-spinner": "^6.1.6",
     "react-player": "^2.14.1",
     "react-responsive": "^9.0.2",
     "react-rough-notation": "^1.0.5",

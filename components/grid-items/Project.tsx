@@ -8,7 +8,7 @@ import Icon from "../icon";
 
 const Project = ({ item }: { item: IGridItems }) => {
   return (
-    <div className="py-4 px-6">
+    <div className="w-full">
       {item.tag === "progressTitle" ? (
         <div className="flex items-center justify-between">
           <div className="flex gap-1 items-center">
@@ -31,7 +31,7 @@ const Project = ({ item }: { item: IGridItems }) => {
                   : "/assets/Book.png"
               }
             />
-            <p className="text-base @md:text-md ml-2 font-semibold">
+            <p className="text-sm md:text-md ml-2 font-semibold">
               {item.title}
             </p>
           </div>
@@ -47,20 +47,22 @@ const Project = ({ item }: { item: IGridItems }) => {
           <div className="flex items-center gap-3 md:gap-4">
             <Icon type={item.icon ?? ""} color={item.bgColor} />
             <div className="flex flex-col gap-0.5 justify-start">
-              <p className="text-base md:text-md font-semibold line-clamp-1">
+              <p className="text-sm md:text-md font-semibold line-clamp-1">
                 {item.title}
               </p>
-              <p className="text-base md:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-1">
+              <p className="text-sm md:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-1">
                 {item.description}
               </p>
             </div>
           </div>
-          <Link
-            href={item.href ?? ""}
-            target="_blank"
-            className="bg-neutral-100 dark:bg-neutral-800 p-2 ml-2x rounded-full text-neutral-500 dark:text-neutral-300 hover:bg-neutral-300 dark:hover:bg-neutral-900 cursor-pointer">
-            <ArrowUpRight size={18} />
-          </Link>
+          <div>
+            <Link
+              href={item.href ?? ""}
+              target="_blank"
+              className="flex bg-neutral-100 dark:bg-neutral-800 p-2 ml-2x rounded-full text-neutral-500 dark:text-neutral-300 hover:bg-neutral-300 dark:hover:bg-neutral-900 cursor-pointer">
+              <ArrowUpRight size={18} />
+            </Link>
+          </div>
         </div>
       ) : (
         <div>Need to create new project</div>
@@ -68,5 +70,6 @@ const Project = ({ item }: { item: IGridItems }) => {
     </div>
   );
 };
+// py4 px6
 
 export default Project;

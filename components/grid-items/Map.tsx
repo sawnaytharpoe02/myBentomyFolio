@@ -5,6 +5,7 @@ import { IGridItems } from "@/config/siteConfig";
 import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import Loader from "../Loader";
 
 const Map = ({ item }: { item: IGridItems }) => {
   const address = item.description?.split(",");
@@ -16,11 +17,15 @@ const Map = ({ item }: { item: IGridItems }) => {
   }, []);
 
   if (!clientLoaded) {
-    return <div className="w-full h-full bg-neutral-400/20 blur-3xl"></div>;
+    return (
+      <div className="w-full h-full flex justify-center items-center">
+        <Loader />
+      </div>
+    );
   }
 
   return (
-    <Link href={item.href ?? ""} target="_blank">
+    <Link href={item.href ?? ""} target="_blank" className="absolute inset-0">
       <div className="absolute w-full h-full">
         <Image
           className="cursor-pointer"
@@ -41,9 +46,7 @@ const Map = ({ item }: { item: IGridItems }) => {
               : item.settings?.src?.light || ""
           }
         />
-      </div>
-      {/* map address */}
-      <div className="relative z-20 font-medium">
+        {/* map address */}
         <h3 className="absolute text-sm right-5 top-5 bg-neutral-50 dark:bg-neutral-900 w-fit px-2 py-1 rounded-lg">
           {item.title}
         </h3>

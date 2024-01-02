@@ -10,7 +10,7 @@ const Social = ({ item }: { item: IGridItems }) => {
       target="_blank"
       className="w-full h-full flex flex-col items-center justify-center cursor-pointer">
       <p className="text-lg font-medium">{item.title}</p>
-      <p className="text-sm text-neutral-600 dark:text-neutral-500 mb-4">
+      <p className="text-xs md:text-sm text-neutral-600 dark:text-neutral-500 mb-4">
         {item.user}
       </p>
       <Icon type={item.icon ?? ""} color={item.bgColor ?? "bg-neutral-950"} />

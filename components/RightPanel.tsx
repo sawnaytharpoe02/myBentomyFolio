@@ -27,7 +27,7 @@ const RightPanel = () => {
         },
         {
           type: "spring",
-          stiffness: 340,
+          stiffness: 335,
           damping: 35,
           delay: staggerDelay,
         }
@@ -37,7 +37,7 @@ const RightPanel = () => {
 
   return (
     <div className="basis-[70%] xl:overflow-y-auto xl:px-2 xl:py-12">
-      <p className="text-xl @lg:text-2xl mb-10">
+      <p className="text-lg @lg:text-2xl mb-10">
         Snapshot of my current obsessions, not a career retrospective ... 🤯✨
       </p>
       <div

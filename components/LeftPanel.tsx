@@ -26,9 +26,9 @@ const LeftPanel = () => {
       />
       {/* left article */}
       <div className="mt-6 space-y-2">
-        <p className="text-4xl font-bold mb-4">{siteConfig.author}</p>
+        <p className="text-3xl md:text-4xl font-bold mb-4">{siteConfig.author}</p>
         <RoughNotationGroup show={true}>
-          <p className="text-[1.05rem] leading-relaxed tracking-wider text-neutral-800 dark:text-neutral-300">
+          <p className="text-md md:text-[1.05rem] leading-relaxed tracking-wider text-neutral-800 dark:text-neutral-300">
             A meticulous{" "}
             <RoughNotation
               type="highlight"
