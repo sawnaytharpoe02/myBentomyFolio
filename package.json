@@ -17,6 +17,7 @@
     "framer-motion": "^10.16.16",
     "lucide-react": "^0.294.0",
     "next": "14.0.4",
+    "next-cloudinary": "^5.16.0",
     "next-themes": "^0.2.1",
     "next-videos": "^1.4.1",
     "react": "^18",

@@ -27,7 +27,7 @@ const RightPanel = () => {
         },
         {
           type: "spring",
-          stiffness: 335,
+          stiffness: 300,
           damping: 35,
           delay: staggerDelay,
         }

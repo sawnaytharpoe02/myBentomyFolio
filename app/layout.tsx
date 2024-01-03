@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import localfont from "next/font/local";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Suspense } from "react";
+import loading from "./loading";
 
 const satoshi = localfont({
   src: [
@@ -53,7 +55,9 @@ export default function RootLayout({
     <html lang="en" className="h-full" suppressHydrationWarning>
       <body className={satoshi.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="h-full">{children}</div>
+            <Suspense fallback={<p>loading...</p>}>
+            <div className="h-full">{children}</div>
+          </Suspense>
         </ThemeProvider>
       </body>
     </html>
