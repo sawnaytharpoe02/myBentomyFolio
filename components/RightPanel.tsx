@@ -36,7 +36,7 @@ const RightPanel = () => {
   }, [scope]);
 
   return (
-    <div className="basis-[70%] xl:overflow-y-auto xl:px-2 xl:py-12">
+    <div className="basis-[70%] xl:overflow-y-auto xl:px-2 xl:py-12 right-panel">
       <p className="text-lg @lg:text-2xl mb-10">
         Snapshot of my current obsessions, not a career retrospective ... 🤯✨
       </p>
