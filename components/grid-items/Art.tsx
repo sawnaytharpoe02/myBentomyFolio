@@ -6,7 +6,7 @@ const Art = ({ item }: { item: IGridItems }) => {
   return (
     <div className="relative w-full h-full">
       <div className="absolute w-full h-full inset-0 object-cover">
-        {item.layout === "2x4" || item.layout === "2x2" ? (
+        {item.artType === "video" ? (
           <video
             id="video"
             src={`https://res.cloudinary.com/daj8y4fbs/video/upload/f_auto:video,q_auto/v1/blobLiquid/${item.path}`}

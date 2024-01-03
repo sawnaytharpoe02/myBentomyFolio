@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
 
-export type GridItemLayout = '1x2' | '2x1' | '2x2' | '2x4';
-export type GridItemType = 'social' | 'project' | 'study' | 'other';
+export type GridItemLayout = "1x2" | "2x1" | "2x2" | "2x4";
+export type GridItemType = "social" | "project" | "study" | "other";
 export type GridItemTag =
-  | 'map'
-  | 'game'
-  | 'art'
-  | 'progressTitle'
-  | 'book'
-  | 'edu';
+  | "map"
+  | "game"
+  | "art"
+  | "progressTitle"
+  | "book"
+  | "edu";
+export type ArtType = "video" | "gallery";
 
 export interface equipments {
   src?: {
@@ -42,6 +43,7 @@ export interface IGridItems {
   path?: string;
   settings?: equipments;
   bookstore?: bookstore[];
+  artType?: ArtType;
 }
 
 export const gridItems: IGridItems[] = [
@@ -206,36 +208,42 @@ export const gridItems: IGridItems[] = [
   {
     type: "other",
     tag: "art",
+    artType: "video",
     layout: "2x4",
     path: "bigSquare1",
   },
   {
     type: "other",
     tag: "art",
+    artType: "video",
     layout: "2x2",
     path: "rectangle1",
   },
   {
     type: "other",
     tag: "art",
+    artType: "gallery",
     layout: "1x2",
     path: "/art/img/1.jpg",
   },
   {
     type: "other",
     tag: "art",
+    artType: "gallery",
     layout: "1x2",
     path: "/art/img/2.jpg",
   },
   {
     type: "other",
     tag: "art",
+    artType: "gallery",
     layout: "1x2",
     path: "/art/img/3.jpg",
   },
   {
     type: "other",
     tag: "art",
+    artType: "gallery",
     layout: "1x2",
     path: "/art/img/4.jpg",
   },
@@ -243,30 +251,35 @@ export const gridItems: IGridItems[] = [
     type: "other",
     tag: "art",
     layout: "2x4",
+    artType: "video",
     path: "bigSquare2",
   },
   {
     type: "other",
     tag: "art",
+    artType: "gallery",
     layout: "2x4",
-    path: "bigSquare3",
+    path: "/art/img/6.jpg",
   },
+
   {
     type: "other",
     tag: "art",
+    artType: "gallery",
     layout: "1x2",
     path: "/art/img/5.jpg",
   },
   {
     type: "other",
     tag: "art",
+    artType: "video",
     layout: "1x2",
-    path: "/art/img/6.jpg",
+    path: "bigSquare3",
   },
 ];
 
 export const siteConfig = {
   items: gridItems,
-  author: 'Saw Nay Thar Poe',
-  mail: 'sawnaytharhpoe02@gmail.com',
+  author: "Saw Nay Thar Poe",
+  mail: "sawnaytharhpoe02@gmail.com",
 };
